@@ -1,18 +1,20 @@
 #!/bin/bash
 git config --global --add safe.directory '*'
 
-echo -e "\033[0;31m Provide your repo name and make sure you have cloned the repo by executing ./clone_repo.sh: \e[0m "
+# use environment variables in cronjob
 
-read -p "repo name: " repo_name
+# setup environment variable $REPO_NAME
 
-if [[ -z "$repo_name" ]]
+echo $REPO_NAME
+
+if [[ -z "$REPO_NAME" ]]
 then 
     echo "Cannot proceed with empty repo name"
 fi
 
 path="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
 
-cd "$path/$repo_name"
+cd "$path/$REPO_NAME"
 
 if [ $? != 0 ]
 then 
