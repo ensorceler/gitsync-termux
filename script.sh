@@ -6,15 +6,15 @@ repo=$2
 
 
 
-PATH="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
+path="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
 
-if [[ ! -d $PATH ]]
+if [[ ! -d $path]]
 then
-    echo "path doesn't exist, creating directory"
-    mkdir -p "$PATH"
+echo "path doesn't exist, creating directory"
+mkdir -p "$path"
 fi
 
-cd $PATH
+cd $path
 
 git clone "git@github.com:$user/$repo 
 echo "repo cloned successfully"
