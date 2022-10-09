@@ -20,8 +20,14 @@ ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You 
 ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/github_keys 
 
 eval "$(ssh-agent -s)"
+exec ssh-agent bash
 
 ssh-add ~/.ssh/github_keys
+
+if [ $? -eq 0 ]
+then 
+    echo "not working"
+fi
 
 echo -e "\e[31m Copy this to part to the clipboard and paste into New SSH Key\e[0m\n"
 
