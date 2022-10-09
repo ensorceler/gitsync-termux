@@ -4,6 +4,11 @@ echo -e "\033[0;31m Provide your repo name and make sure you have cloned the rep
 
 read -p "repo name: " repo_name
 
+if [[ -z "$repo_name" ]]
+then 
+    echo "Cannot proceed with empty repo name"
+fi
+
 path="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
 
 cd "$path/$repo_name"
