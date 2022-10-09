@@ -36,6 +36,6 @@ git pull
 
 git add . 
 
-git commit -q -m "Last Sync: $(date +"%Y-%m-%d %H:%M:%S") from device ($device_maf $device_model)"
+git commit -q -m "Last Sync: $(date +"%Y-%m-%d %H:%M:%S") from device $device_maf $device_model"
 
 git push -q
