@@ -10,6 +10,7 @@ echo $REPO_NAME
 if [[ -z "$REPO_NAME" ]]
 then 
     echo "Cannot proceed with empty repo name"
+    exit 1
 fi
 
 path="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
