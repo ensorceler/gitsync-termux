@@ -17,10 +17,11 @@ ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You 
 -f : the -f flag is used to provide a file path where the generated keys will be stored. 
 '
 
-ssh-keygen -t ed25519 -C "$1" -N "" -f ~/.ssh/github_keys 
+ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/github_keys 
 
 eval `ssh-agent`
 
+ssh-agent /bin/sh
 ssh-add ~/.ssh/github_keys
 
 echo -e "\e[31m Copy this to part to the clipboard and paste into New SSH Key\e[0m\n"
