@@ -21,7 +21,6 @@ ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/github_keys
 
 eval `ssh-agent`
 
-ssh-agent /bin/sh
 ssh-add ~/.ssh/github_keys
 
 echo -e "\e[31m Copy this to part to the clipboard and paste into New SSH Key\e[0m\n"
