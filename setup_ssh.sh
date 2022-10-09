@@ -24,10 +24,11 @@ ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You 
 - N "": the -N flag is used to provide a passphrase. We are providing an empty passphrase. You can configure that to your liking.
 '
 
-ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/id_25519
+ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/id_ed25519
+
 
 eval `ssh-agent -s`
-ssh-add ~/.ssh/id_25519
+ssh-add ~/.ssh/id_ed25519
 
 if [ $? != 0 ]
 then 
@@ -35,7 +36,7 @@ then
 fi
 echo -e "\e[31m Copy this to part to the clipboard and paste into New SSH Key\e[0m\n"
 
-cat ~/.ssh/id_25519.pub
+cat ~/.ssh/id_ed25519.pub
 
 
 
