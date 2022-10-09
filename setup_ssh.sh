@@ -26,8 +26,10 @@ ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You 
 
 ssh-keygen -t ed25519 -C "$email" -N "" -f ~/.ssh/id_25519
 
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_25519
 
-if [ $? -eq 0 ]
+if [ $? != 0 ]
 then 
     echo "not working"
 fi
