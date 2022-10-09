@@ -19,8 +19,7 @@ ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You 
 
 ssh-keygen -t rsa -C "$email" -f ~/.ssh/github_keys 
 
-#eval `ssh-agent`
-#ssh-add ~/.ssh/github_keys
+ssh-add ~/.ssh/github_keys
 
 if [ $? -eq 0 ]
 then 
