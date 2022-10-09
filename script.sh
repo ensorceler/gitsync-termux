@@ -22,5 +22,8 @@ fi
 
 cd $path
 
-git clone "git@github.com:$user/$repo 
+git clone "git@github.com:$user_name/$repo_name.git"
+
+
 echo "repo cloned successfully"
+
