@@ -1,13 +1,21 @@
 #!/bin/bash
 
+
+echo -e -n "\033[0;35m Enter your github username: \e[0m"
+read username 
 echo -e -n "\033[0;35m Enter your github email: \e[0m" 
 read email 
 
-if [[ -z "$email" ]]
+
+
+if [[ -z "$email" ]] | [[ -z "$username" ]]
 then 
-    echo "Cannot Proceed with empty email"
+    echo "Cannot Proceed with empty email or username"
     exit 1
 fi
+
+git config --global user.name "$username"
+git config --global user.email "$email"
 
 : '
 ssh-keygen: The command-line tool used for creating a new pair of SSH keys. You can see its flags with ssh-keygen help

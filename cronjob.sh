@@ -14,6 +14,12 @@ path="/data/data/com.termux/files/home/storage/shared/Documents/my_github_repos"
 
 cd "$path/$repo_name"
 
+if [ $? -eq 0 ]
+then 
+    echo "Error exiting"
+    exit 1
+fi
+
 git pull 
 
 changes_exist="$(git status --porcelain | wc -l)"
