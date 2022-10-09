@@ -21,9 +21,11 @@ then
 fi
 
 cd $path
-
 git clone "git@github.com:$user_name/$repo_name.git"
 
-
-echo "repo cloned successfully"
-
+if [ $? -eq 0 ]
+then 
+    echo "repo cloned successfully"
+else 
+    echo "Error"
+fi
