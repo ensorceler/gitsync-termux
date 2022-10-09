@@ -29,8 +29,8 @@ then
     exit 0
 fi
 
-device_maf=termux-info | awk '/Device manufacturer:/{getline; print}'
-device_model=termux-info | awk '/Device model:/{getline; print}'
+device_maf=$(termux-info | awk '/Device manufacturer:/{getline; print}')
+device_model=$(termux-info | awk '/Device model:/{getline; print}')
 
 git pull
 
