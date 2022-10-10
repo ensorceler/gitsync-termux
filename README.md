@@ -4,8 +4,7 @@
 
 The purpose of this whole thing is for you to enjoy convenient note taking experience (Obsidian, Logseq etc) where all your files will by synced with a remote git repo. You can access them from anywhere with any android device and make changes to the notes and they will be synced.
 
-**(I apologize in advance for my bad documentation writing :P). This repo is open to contributions. Please help me out if you can.
-**
+**(I apologize in advance for my bad documentation writing :P). This repo is open to contributions. Please help me out if you can.**
 
 ## Table of Contents:
 
