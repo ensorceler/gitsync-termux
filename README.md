@@ -1,4 +1,4 @@
-## GitSync Termux
+# GitSync Termux
 
 ### Why
 
